@@ -4,22 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Document</title>
-
 </head>
 
 <body>
-    <main class="container">
-        <div class="card">
-            <ul>
-                <li><a href="./bai-1.html">Bài tập 1</a></li>
-                <li><a href="./bai-2.html">Bài tập 2</a></li>
-                <li><a href="./bai-3.html">Bài tập 3</a></li>
-            </ul>
+    <div class="grid wide">
+        <h1>All File</h1>
+        <hr>
+        <div class="row">
+            <div class="col l-3 m-6 c-6">
+                <div class="card">
+                    <div class="file__content" onclick="window.location.href='./bai-1.html';" style="cursor: pointer;">
+                        <i class="file__icon fa-solid fa-folder"></i>
+                        <h3 class="file__name">Bai 1</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col l-3 m-6 c-6">
+                <div class="card">
+                    <div class="file__content" onclick="window.location.href='./bai-2.html';" style="cursor: pointer;">
+                        <i class="file__icon fa-solid fa-folder"></i>
+                        <h3 class="file__name">Bai 2</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col l-3 m-6 c-6">
+                <div class="card">
+                    <div class="file__content" onclick="window.location.href='./bai-3.html';" style="cursor: pointer;">
+                        <i class="file__icon fa-solid fa-folder"></i>
+                        <h3 class="file__name">Bai 3</h3>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </main>
-
-
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+
+:root {
+    --primary-color: #faf9f9;
+    --secondary-color: #646567;
+    --fw-l: 400;
+    --fw-b: 700;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+hr {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    opacity: 0.5;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-weight: var(--fw-b);
+    font-size: 3.4rem;
+}
+
+.card {
+    background-color: var(--primary-color);
+    min-height: 50px;
+    border-radius: 8px;
+    font-size: 4.0rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    margin-top: 8px;
+}
+
+.card:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.file__content {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.file__content:hover {
+    color: var(--primary-color);
+}
+
+
+.file__name {
+    font-size: 2.2rem;
+    font-weight: var(--fw-b);
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+@media (min-width: 740px) {
+    .card {
+        margin-top: 16px;
+    }
+}
+
+@media (min-width: 1113px) {
+    .card {
+        margin-top: 24px;
+    }
+}
