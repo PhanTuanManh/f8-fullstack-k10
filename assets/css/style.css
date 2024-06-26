@@ -6,10 +6,6 @@
     box-sizing: inherit;
 }
 
-.mt-32 {
-    margin-top: 32px;
-}
-
 
 :root {
     --primary-color: #faf9f9;
@@ -17,6 +13,7 @@
     --fw-l: 400;
     --fw-b: 700;
 }
+
 
 html {
     font-size: 62.5%;
@@ -34,6 +31,7 @@ h1 {
     font-weight: var(--fw-b);
     font-size: 3.4rem;
 }
+
 
 .card {
     background-color: var(--primary-color);
@@ -68,6 +66,7 @@ h1 {
     margin-left: 12px;
     text-decoration: none;
 }
+
 
 @media (min-width: 740px) {
     .card {
