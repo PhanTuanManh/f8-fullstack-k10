@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 450px;
+            border-collapse: collapse;
+        }
+
+        col.col-1 {
+            width: 25%;
+        }
+
+        col.col-2 {
+            width: 75%;
+        }
+
+        .mb-12 {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <table style="border: none;">
+            <colgroup>
+                <col class="col-1">
+                <col class="col-2">
+            </colgroup>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input type="text" name="" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" name="" id="password"></td>
+            </tr>
+            <tr>
+                <td><label for="city">City of Employment</label></td>
+                <td><input type="text" name="" id="city"></td>
+            </tr>
+            <tr>
+                <td><label for="server">Web server</label></td>
+                <td>
+                    <select class="mb-12" name="server" id="server">
+                        <option value="">--Choose a server--</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4"><label>Please specify your role:</label></td>
+                <td><label for="admin">
+                        <input type="radio" name="role" id="admin" value="admin"> Admin
+                    </label></td>
+            </tr>
+            <tr>
+                <td><label for="engineer">
+                        <input type="radio" name="role" id="engineer" value="engineer"> Engineer
+                    </label></td>
+            </tr>
+            <tr>
+                <td><label for="manager">
+                        <input type="radio" name="role" id="manager" value="manager"> Manager
+                    </label></td>
+            </tr>
+            <tr>
+                <td><label for="guest">
+                        <input type="radio" name="role" id="guest" value="guest" class="mb-12"> Guest
+                    </label></td>
+            </tr>
+            <tr>
+                <td rowspan="3"><label for="">Single Sign-on to the following:</label></td>
+                <td><label for="mail"><input type="checkbox" name="mail" id="mail"> Mail</label></td>
+            </tr>
+            <tr>
+                <td><label for="pay"><input type="checkbox" name="pay" id="pay"> Payroll</label></td>
+            </tr>
+            <tr>
+                <td><label for="service"><input type="checkbox" name="service" id="service" class="mb-12">
+                        Self-service</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Login">
+                    <input type="button" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+:root {
+    --bg-color: #334455;
+    --og-color: #ffa500;
+    --y-color: #f8db35
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+}
+
+.card {
+    background-color: var(--bg-color);
+    margin-top: 5px;
+    border-radius: 8px;
+    padding: 28px 34px 20px;
+    color: #fff;
+}
+
+.card__header {
+    font-size: 2.6rem;
+}
+
+.card__header>span {
+    color: var(--og-color);
+}
+
+.card__des {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding-top: 12px;
+
+}
+
+.card__input {
+    padding-top: 12px;
+}
+
+.input__btn,
+.input__text {
+    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid;
+    font-size: 1.6rem;
+}
+
+.input__text {
+    min-width: 268px;
+    border: 1px solid #ccc;
+}
+
+.input__text:hover {
+    color: #ddd;
+}
+
+.input__text:hover::placeholder {
+    color: var(--og-color);
+}
+
+.input__text:focus {
+    border-color: var(--og-color);
+    outline: none;
+}
+
+.input__btn {
+    font-weight: 700;
+    min-width: 218px;
+    background-color: var(--y-color);
+    border: 1px solid #807f48;
+    margin-left: 4px;
+}
+
+.input__btn:hover {
+    background-color: var(--og-color);
+    color: #fff;
+}
