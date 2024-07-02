@@ -47,6 +47,9 @@ h1 {
 .card:hover {
     background-color: var(--secondary-color);
     transform: scale(1.05);
+    box-shadow: 12px 19px 75px -3px rgba(0, 0, 0, 0.53);
+    -webkit-box-shadow: 12px 19px 75px -3px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 12px 19px 75px -3px rgba(0, 0, 0, 0.53);
 }
 
 .file__content {
@@ -54,6 +57,7 @@ h1 {
     display: flex;
     align-items: center;
     color: var(--secondary-color);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .file__content:hover {
