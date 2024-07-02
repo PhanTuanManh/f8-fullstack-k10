@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background: url("./maxresdefault.jpg") no-repeat top / cover;
+}
+
+.wrapper {
+    min-height: 100dvh;
+    position: relative;
+    width: 100%;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 33%;
+    position: absolute;
+    height: 41%;
+    bottom: 55%;
+    right: 43%;
+    transform: translate(50%, 50%);
+    border-radius: 6px;
+    padding: 34px;
+    text-align: center;
+    box-shadow: -7px 19px 34px 6px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: -7px 19px 34px 6px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: -7px 19px 34px 6px rgba(0, 0, 0, 0.62);
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+span {
+    display: block;
+    padding-top: 34px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+a {
+    color: black;
+}
