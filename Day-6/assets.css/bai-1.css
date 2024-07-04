@@ -96,6 +96,11 @@ html {
     background-color: var(--third-color);
 }
 
+.form__input:hover .input__wrapper i,
+.form__input:focus .input__wrapper i {
+    color: var(--third-color);
+}
+
 .guide {
     display: none;
     position: absolute;
@@ -227,4 +232,5 @@ input[type="button"] {
     border: none;
     background-color: var(--secondary-color);
     color: #fff;
+    cursor: pointer;
 }
