@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets.css/bai-1.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <h1 class="card__head">Hey There</h1>
+            <p class="card__sub-head"><span>We'd like to hear from you.</span> Send us your message or just say hy with
+                our
+                contact form or directly via phone, we love to chat.</p>
+            <div class="card__form">
+                <form action="" method="get">
+                    <div class="row">
+                        <div class="form__input">
+                            <div class="input__icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="input__wrapper">
+                                <input type="text" placeholder="Your name" id="name">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form__input">
+                            <div class="input__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="input__wrapper">
+                                <input type="email" placeholder="your@domain.com" id="email">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form__input">
+                            <div class="input__icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="input__wrapper">
+                                <input type="number" placeholder="+44 00 123" id="phone">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form__input">
+                            <div class="input__icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="input__wrapper">
+                                <select name="subject" id="subject">
+                                    <option value="" disabled selected hidden>Subject</option>
+                                    <option value="Javascript">Javascript</option>
+                                </select>
+                                <i class="fas fa-sort ft-12"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form__input ">
+                            <div class="input__icon icon-top">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <div class="input__wrapper icon-top">
+                                <textarea name="" id="message" placeholder="Message"></textarea>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="checkbox" class="custom-checkbox">
+                            <label for="checkbox">Send me a copy of this message</label>
+                        </div>
+                        <input type="button" value="SEND">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
