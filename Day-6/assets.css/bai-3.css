@@ -20,28 +20,74 @@ body {
 }
 
 header {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 16px 40px;
-
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
 }
 
+.head__logo,
 .head__category {
     display: flex;
-
+    align-items: center;
 }
 
+.header__nav-link {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Head__logo */
+.head__logo img {
+    max-height: 50px;
+}
+
+/* Head__catory */
+.head__category {
+    margin-left: 34px;
+}
+
+.head__category i {
+    font-size: 1.6rem;
+    margin-right: 6px;
+}
+
+/* Head__nav */
 .head__nav {
     display: flex;
-}
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
+    /* chiếm khoảng trống còn lại */
+    flex-grow: 1;
+    justify-content: center;
+}
 
 .head__nav .nav__item {
     display: flex;
     align-items: center;
+    padding: 0 20px;
 }
 
+.head__nav .nav__item i {
+    margin-left: 4px;
+}
+
+
 .head__register {
-    justify-self: flex-end;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 15px 26px;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(50, 87, 239, 1) 0%, rgba(184, 102, 231, 1) 100%);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
 }
