@@ -10,6 +10,7 @@
 
 :root {
     --primary-bg: #ff574d;
+    --bg-color: #DA5B4E;
     --h-cl: #272323;
     --f-cl: #717171;
 }
@@ -20,16 +21,15 @@ html {
     font-family: "Nunito", sans-serif;
 }
 
-body {
-    background: url("../assets/login-bg2.jpg") no-repeat;
-}
+body {}
 
 .main {
     width: 100%;
-    min-height: 100dvh;
+    min-height: 100dvb;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url("../assets/login-bg2.jpg") no-repeat bottom;
 }
 
 .card {
@@ -41,32 +41,95 @@ body {
 
 .card .card__about {
     background-color: var(--primary-bg);
-    padding: 70px 18px;
+    padding: 110px 22px;
     color: #fff;
-    max-width: 294px;
+    max-width: 412px;
+}
+
+.card__about-head,
+.card__about-body {
+    text-align: center;
 }
 
 .card__about-head {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .card__about-head i {
-    font-size: 3.8rem;
-    margin-right: 8px;
+    font-size: 5.4rem;
+    margin-right: 10px;
 }
 
 .card__about-head h2 {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .card .card__about-body {
-    margin-top: 14px;
+    margin-top: 20px;
 }
 
 .card__about-body p {
-    font-size: 1.4rem;
-    line-height: 1.6;
+    font-size: 2rem;
+    line-height: 1.5;
     text-align: center;
+}
+
+.about__btn {
+    border: none;
+    color: var(--primary-bg);
+    background-color: #fff;
+    padding: 14px 42px;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    margin: 40px 0 46px;
+}
+
+.card__about-body nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.card__about-body nav ul li {
+    display: block;
+    background-color: var(--bg-color);
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 0 8px 16px;
+}
+
+.card__about-body nav ul li a {
+    color: #fff;
+}
+
+.card__login {
+    text-align: center;
+    width: 100%;
+    padding: 66px 54px;
+}
+
+.card__login h3 {
+    font-size: 2.8rem;
+    position: relative;
+    letter-spacing: 0.4px;
+}
+
+.card__login h3 span {
+    color: var(--primary-bg);
+}
+
+.card__login h3::after {
+    content: "";
+    border-top: 1px solid var(--primary-bg);
+    width: 60px;
+    position: absolute;
+    bottom: -50%;
+    left: 43%;
 }

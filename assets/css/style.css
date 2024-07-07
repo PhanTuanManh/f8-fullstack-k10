@@ -33,6 +33,9 @@ h1 {
     font-size: 3.4rem;
 }
 
+.row {
+    margin: 0 4px;
+}
 
 .card {
     background-color: var(--primary-color);
@@ -80,7 +83,20 @@ h1 {
     }
 }
 
+/* PC medium resolution > */
 @media (min-width: 1113px) {
+    .card {
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .card {
+        margin-top: 16px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
     .card {
         margin-top: 24px;
     }
