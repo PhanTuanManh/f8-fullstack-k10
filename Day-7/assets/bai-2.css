@@ -93,6 +93,7 @@ html {
     border-radius: 4px;
     margin: 40px 0 46px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
 }
 
 .card__about-body nav ul {
@@ -134,6 +135,13 @@ html {
     top: 42%;
     transform: translate(50%, 50%);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card__arrow:hover {
+    background-color: var(--primary-bg);
+    color: #fff;
 }
 
 /* Card__login */
@@ -239,6 +247,12 @@ html {
     padding: 18px;
     border-radius: 4px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login__btn:hover {
+    background-color: var(--bg-color);
 }
 
 .sign-up {
