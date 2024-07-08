@@ -110,15 +110,18 @@ body {}
 }
 
 .card__login {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    width: 100%;
-    padding: 66px 54px;
+    padding: 62px 54px;
+    max-width: 572px;
 }
 
 .card__login h3 {
     font-size: 2.8rem;
     position: relative;
     letter-spacing: 0.4px;
+    margin-bottom: 24px;
 }
 
 .card__login h3 span {
@@ -127,9 +130,27 @@ body {}
 
 .card__login h3::after {
     content: "";
-    border-top: 1px solid var(--primary-bg);
+    background-color: var(--primary-bg);
+    height: 1.3px;
     width: 60px;
     position: absolute;
     bottom: -50%;
     left: 43%;
+}
+
+.card__login input[type="email"],
+.card__login input[type="password"] {
+    margin-top: 26px;
+    width: 100%;
+    padding: 18px 24px;
+    font-size: 1.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card__login .login__sub-input {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
 }
