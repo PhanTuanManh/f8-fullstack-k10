@@ -11,6 +11,12 @@
             border-collapse: collapse;
         }
 
+        th {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+        }
+
         col.col-1 {
             width: 25%;
         }
@@ -33,19 +39,19 @@
                 <col class="col-2">
             </colgroup>
             <tr>
-                <td><label for="username">Username</label></td>
+                <th><label for="username">Username</label></th>
                 <td><input type="text" name="" id="username"></td>
             </tr>
             <tr>
-                <td><label for="password">Password</label></td>
+                <th><label for="password">Password</label></th>
                 <td><input type="password" name="" id="password"></td>
             </tr>
             <tr>
-                <td><label for="city">City of Employment</label></td>
+                <th><label for="city">City of Employment</label></th>
                 <td><input type="text" name="" id="city"></td>
             </tr>
             <tr>
-                <td><label for="server">Web server</label></td>
+                <th><label for="server">Web server</label></th>
                 <td>
                     <select class="mb-12" name="server" id="server">
                         <option value="">--Choose a server--</option>
@@ -53,36 +59,36 @@
                 </td>
             </tr>
             <tr>
-                <td rowspan="4"><label>Please specify your role:</label></td>
+                <th rowspan="4"><label>Please specify your role:</label></th>
                 <td><label for="admin">
                         <input type="radio" name="role" id="admin" value="admin"> Admin
                     </label></td>
             </tr>
             <tr>
-                <td><label for="engineer">
+                <th><label for="engineer">
                         <input type="radio" name="role" id="engineer" value="engineer"> Engineer
-                    </label></td>
+                    </label></th>
             </tr>
             <tr>
-                <td><label for="manager">
+                <th><label for="manager">
                         <input type="radio" name="role" id="manager" value="manager"> Manager
-                    </label></td>
+                    </label></th>
             </tr>
             <tr>
-                <td><label for="guest">
+                <th><label for="guest">
                         <input type="radio" name="role" id="guest" value="guest" class="mb-12"> Guest
-                    </label></td>
+                    </label></th>
             </tr>
             <tr>
-                <td rowspan="3"><label for="">Single Sign-on to the following:</label></td>
+                <th rowspan="3"><label for="">Single Sign-on to the following:</label></th>
                 <td><label for="mail"><input type="checkbox" name="mail" id="mail"> Mail</label></td>
             </tr>
             <tr>
-                <td><label for="pay"><input type="checkbox" name="pay" id="pay"> Payroll</label></td>
+                <th><label for="pay"><input type="checkbox" name="pay" id="pay"> Payroll</label></th>
             </tr>
             <tr>
-                <td><label for="service"><input type="checkbox" name="service" id="service" class="mb-12">
-                        Self-service</label></td>
+                <th><label for="service"><input type="checkbox" name="service" id="service" class="mb-12">
+                        Self-service</label></th>
             </tr>
             <tr>
                 <td></td>
