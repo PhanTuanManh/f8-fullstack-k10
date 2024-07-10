@@ -35,21 +35,26 @@
     <form action="#" method="post">
         <table style="border: none;">
             <colgroup>
+                <!-- Column groups for styling -->
                 <col class="col-1">
                 <col class="col-2">
             </colgroup>
+            <!-- Username input row -->
             <tr>
                 <th><label for="username">Username</label></th>
                 <td><input type="text" name="" id="username"></td>
             </tr>
+            <!-- Password input row -->
             <tr>
                 <th><label for="password">Password</label></th>
                 <td><input type="password" name="" id="password"></td>
             </tr>
+            <!-- City of Employment input row -->
             <tr>
                 <th><label for="city">City of Employment</label></th>
                 <td><input type="text" name="" id="city"></td>
             </tr>
+            <!-- Web server selection row -->
             <tr>
                 <th><label for="server">Web server</label></th>
                 <td>
@@ -58,6 +63,7 @@
                     </select>
                 </td>
             </tr>
+            <!-- Role selection section (radio buttons) -->
             <tr>
                 <th rowspan="4"><label>Please specify your role:</label></th>
                 <td><label for="admin">
@@ -79,6 +85,7 @@
                         <input type="radio" name="role" id="guest" value="guest" class="mb-12"> Guest
                     </label></th>
             </tr>
+            <!-- Single Sign-on options (checkboxes) -->
             <tr>
                 <th rowspan="3"><label for="">Single Sign-on to the following:</label></th>
                 <td><label for="mail"><input type="checkbox" name="mail" id="mail"> Mail</label></td>
@@ -90,6 +97,7 @@
                 <th><label for="service"><input type="checkbox" name="service" id="service" class="mb-12">
                         Self-service</label></th>
             </tr>
+            <!-- Form buttons (Login and Reset) -->
             <tr>
                 <td></td>
                 <td>
@@ -99,6 +107,7 @@
             </tr>
         </table>
     </form>
+
 </body>
 
 </html>
