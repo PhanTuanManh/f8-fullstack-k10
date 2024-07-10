@@ -1,15 +1,18 @@
 :root {
+    /* Define custom properties (CSS variables) for colors */
     --bg-color: #334455;
     --og-color: #ffa500;
-    --y-color: #f8db35
+    --y-color: #f8db35;
 }
 
+/* Global styles and box-sizing settings */
 * {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
 }
 
+/* Base settings for the HTML document */
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -18,6 +21,7 @@ html {
     letter-spacing: 0.6px;
 }
 
+/* Main container styling */
 .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,6 +29,7 @@ html {
     display: block;
 }
 
+/* Card component styling */
 .card {
     background-color: var(--bg-color);
     margin-top: 5px;
@@ -33,25 +38,29 @@ html {
     color: #fff;
 }
 
+/* Card header styling */
 .card__header {
     font-size: 2.6rem;
 }
 
+/* Highlighted text within the card header */
 .card__header>span {
     color: var(--og-color);
 }
 
+/* Card description styling */
 .card__des {
     font-size: 1.4rem;
     line-height: 1.6;
     padding-top: 12px;
-
 }
 
+/* Input section within the card */
 .card__input {
     padding-top: 12px;
 }
 
+/* Shared styling for input fields and button */
 .input__btn,
 .input__text {
     border-radius: 4px;
@@ -60,24 +69,29 @@ html {
     font-size: 1.6rem;
 }
 
+/* Text input field styling */
 .input__text {
     min-width: 268px;
     border: 1px solid #ccc;
 }
 
+/* Hover effect for the text input field */
 .input__text:hover {
     color: #ddd;
 }
 
+/* Placeholder styling when text input is hovered */
 .input__text:hover::placeholder {
     color: var(--og-color);
 }
 
+/* Focus effect for the text input field */
 .input__text:focus {
     border-color: var(--og-color);
     outline: none;
 }
 
+/* Button styling */
 .input__btn {
     font-weight: 700;
     min-width: 218px;
@@ -86,6 +100,7 @@ html {
     margin-left: 4px;
 }
 
+/* Hover effect for the button */
 .input__btn:hover {
     background-color: var(--og-color);
     color: #fff;
