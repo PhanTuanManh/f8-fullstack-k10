@@ -106,4 +106,5 @@ html {
     background-color: var(--y-color);
     border: 1px solid #807f48;
     margin-left: 4px;
+    cursor: pointer;
 }
