@@ -3,6 +3,7 @@
     --bg-color: #334455;
     --og-color: #ffa500;
     --y-color: #f8db35;
+
 }
 
 /* Global styles and box-sizing settings */
@@ -35,6 +36,24 @@ html {
     margin-top: 5px;
     border-radius: 8px;
     padding: 28px 34px 20px;
+    color: #fff;
+}
+
+/* Placeholder styling when card is hovered */
+.card:hover .input__text::placeholder {
+    color: var(--og-color);
+}
+
+/* Placeholder styling when card is hovered */
+.card:hover .input__text {
+    border-color: var(--og-color);
+    outline: none;
+    background-color: #ddd;
+}
+
+/* Placeholder styling when card is hovered */
+.card:hover .input__btn {
+    background-color: var(--og-color);
     color: #fff;
 }
 
@@ -76,19 +95,8 @@ html {
 }
 
 /* Hover effect for the text input field */
-.input__text:hover {
+.input__text {
     color: #ddd;
-}
-
-/* Placeholder styling when text input is hovered */
-.input__text:hover::placeholder {
-    color: var(--og-color);
-}
-
-/* Focus effect for the text input field */
-.input__text:focus {
-    border-color: var(--og-color);
-    outline: none;
 }
 
 /* Button styling */
@@ -98,10 +106,4 @@ html {
     background-color: var(--y-color);
     border: 1px solid #807f48;
     margin-left: 4px;
-}
-
-/* Hover effect for the button */
-.input__btn:hover {
-    background-color: var(--og-color);
-    color: #fff;
 }
