@@ -26,6 +26,11 @@ html {
     list-style: none;
 }
 
+/* Margin for card item */
+.card__item {
+    margin-top: 4px;
+}
+
 /* Styling for images inside card items */
 img {
     width: 16px;
@@ -33,8 +38,20 @@ img {
 }
 
 /* Styling for paragraph text inside card items */
-p {
+span {
     font-size: 2rem;
     display: inline-block;
     font-weight: 500;
+}
+
+span::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    background: url('./confused.png') no-repeat center center;
+    background-size: contain;
 }
