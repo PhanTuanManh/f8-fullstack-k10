@@ -1,9 +1,11 @@
+/* Universal selector to reset padding, margin, and box-sizing */
 * {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
 }
 
+/* Setting default styles for the HTML element */
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -11,16 +13,12 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Utility class for margin-top */
 .mt-24 {
     margin-top: 24px;
 }
 
-a {
-    color: #216AC7;
-    text-decoration: none;
-    border-bottom: 1px solid #216AC7;
-}
-
+/* Main container styling */
 .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -28,6 +26,7 @@ a {
     display: block;
 }
 
+/* Card container styling */
 .card {
     margin: 0 auto;
     max-width: 678px;
@@ -37,18 +36,28 @@ a {
     color: #56617D;
 }
 
+/* Styling for spans inside card description */
 .card__des span {
     background-color: #E5E7F5;
     border: 1px solid #E5E7F5;
     border-radius: 5px;
 }
 
+/* Styling for anchor tags */
+a {
+    color: #216AC7;
+    text-decoration: none;
+    border-bottom: 1px solid #216AC7;
+}
+
+/* Card box styling */
 .card__box {
     padding: 20px 24px;
     border: 1px solid #7E8094;
     border-radius: 18px;
 }
 
+/* Styling for links inside card box */
 .box__link {
     display: inline-block;
     padding-top: 16px;

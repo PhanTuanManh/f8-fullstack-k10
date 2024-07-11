@@ -1,9 +1,11 @@
+/* Universal selector to reset padding, margin, and box-sizing */
 * {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
 }
 
+/* Setting default styles for the HTML element */
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -11,6 +13,7 @@ html {
     letter-spacing: 0.6px;
 }
 
+/* Main container styling */
 .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -18,15 +21,18 @@ html {
     display: block;
 }
 
+/* Removing default list styling for card list */
 .card__list {
     list-style: none;
 }
 
+/* Styling for images inside card items */
 img {
     width: 16px;
     padding-right: 4px;
 }
 
+/* Styling for paragraph text inside card items */
 p {
     font-size: 2rem;
     display: inline-block;
