@@ -1,0 +1,81 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --f-color: #443622;
+    --bg-color: #f0f0f0;
+    --bg-h-color: #AF7B37;
+}
+
+/* Resetting margins and padding, setting box-sizing to border-box */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Asap', 'sans-serif';
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 18px;
+    overflow: hidden;
+}
+
+.heading {
+    text-transform: uppercase;
+    color: var(--f-color);
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.heading::after {
+    content: "";
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+    width: 750px;
+    height: 1px;
+    background-color: #ccc;
+    top: 50%;
+    left: 100%;
+}
+
+.location__container {
+    margin-top: 18px;
+}
+
+.location__container nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.location__container nav ul li {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--f-color);
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+.location__container nav ul li a {
+    text-decoration: none;
+    color: var(--f-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.location__container nav ul li span {
+    transform: skew(-15deg);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 4px;
+}
