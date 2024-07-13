@@ -1,9 +1,10 @@
 /* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Defining root variables for color scheme */
 :root {
     --f-color: #443622;
-    --bg-color: #f0f0f0;
+    --bg-color: #E5E5E5;
     --bg-h-color: #AF7B37;
 }
 
@@ -16,23 +17,28 @@
     box-sizing: inherit;
 }
 
+/* Setting base styles for html */
 html {
     font-size: 62.5%;
     font-family: 'Asap', 'sans-serif';
     box-sizing: border-box;
+    background-color: #F4F1EF;
 }
 
+/* Styles for active navigation items */
 .active,
 .active>a {
     background-color: var(--bg-h-color) !important;
     color: #fff !important;
 }
 
+/* Header styles */
 header {
     margin-top: 18px;
     overflow: hidden;
 }
 
+/* Heading styles */
 .heading {
     text-transform: uppercase;
     color: var(--f-color);
@@ -41,6 +47,7 @@ header {
     font-size: 1.6rem;
 }
 
+/* Adding underline to heading */
 .heading::after {
     content: "";
     display: inline-block;
@@ -53,16 +60,27 @@ header {
     left: 100%;
 }
 
+/* Location container styles */
 .location__container {
     margin-top: 18px;
 }
 
-.location__container nav ul {
-    display: flex;
-    justify-content: space-between;
+/* Scroll container styles */
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-.location__container nav ul li {
+/* Navigation items styles */
+.scroll-container ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+/* Navigation item styles */
+.scroll-container ul li {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     background-color: var(--bg-color);
@@ -70,8 +88,20 @@ header {
     text-align: center;
     padding: 12px 20px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
+/* Customize scrollbar styles */
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* Link styles in navigation items */
 .location__container nav ul li a {
     text-decoration: none;
     color: var(--f-color);
@@ -79,6 +109,7 @@ header {
     font-weight: 600;
 }
 
+/* Span styles in navigation items */
 .location__container nav ul li span {
     transform: skew(-15deg);
     font-weight: 700;
@@ -86,11 +117,79 @@ header {
     margin-top: 4px;
 }
 
+/* Card styles */
 .card {
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
     overflow: hidden;
     margin-top: 24px;
+    border-radius: 4px;
+    width: 100%;
+    height: 238px;
+    filter: brightness(0.9);
+    cursor: pointer;
 }
 
-.card img {}
+/* Overlay on cards */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24, 42, 50, 0.3);
+    z-index: 1;
+}
+
+/* Hover effect on cards */
+.card:hover::before {
+    background: rgba(24, 42, 50, 0.1);
+}
+
+/* Background images for specific cards */
+.card-1 {
+    background: url("./img/Quan-2-1.jpg") no-repeat center center / cover;
+}
+
+.card-2 {
+    background: url("./img/quan-7-thanh-pho-ho-chi-minh.jpg") no-repeat center center / cover;
+}
+
+.card-3 {
+    background: url("./img/tong-quan-noi-khu-vinhomes-grand-park-quan-9-bien-nhan-tao.jpg") no-repeat center center / cover;
+}
+
+.card-4 {
+    background: url("./img/20210325110910-a0b1.jpg") no-repeat center center / cover;
+}
+
+.card-5 {
+    background: url("./img/Chợ_Thủ_Đức.jpg") no-repeat center center / cover;
+}
+
+.card-6 {
+    background: url("./img/4-2212.jpeg") no-repeat center center / cover;
+}
+
+/* Card info styles */
+.card__info {
+    position: relative;
+    padding: 28px 24px 26px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+/* Info header styles */
+.card__info .info__head {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* Paragraph styles in card info */
+.card__info p {
+    font-size: 1.5rem;
+}
