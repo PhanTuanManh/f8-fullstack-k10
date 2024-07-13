@@ -22,6 +22,12 @@ html {
     box-sizing: border-box;
 }
 
+.active,
+.active>a {
+    background-color: var(--bg-h-color) !important;
+    color: #fff !important;
+}
+
 header {
     margin-top: 18px;
     overflow: hidden;
@@ -79,3 +85,12 @@ header {
     font-size: 1rem;
     margin-top: 4px;
 }
+
+.card {
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: 24px;
+}
+
+.card img {}

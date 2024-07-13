@@ -35,7 +35,7 @@ body {
 
 /* Banner section styles */
 .banner {
-    background: url("./ha-noi-melody-residences-cover.jpg") no-repeat center center;
+    background: url("./img/ha-noi-melody-residences-cover.jpg") no-repeat center center;
     background-size: cover;
     height: 398px;
 }
