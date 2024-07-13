@@ -56,7 +56,6 @@
                 </ul>
             </nav>
         </div>
-
         <!-- Property Listings Section -->
         <div class="row">
             <div class="col l-4 m-6 c-12">
@@ -114,27 +113,22 @@
 <script>
     // Enable mouse drag to scroll
     const scrollContainer = document.querySelector('.scroll-container');
-
     let isDown = false;
     let startX;
     let scrollLeft;
-
     scrollContainer.addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - scrollContainer.offsetLeft;
         scrollLeft = scrollContainer.scrollLeft;
     });
-
     scrollContainer.addEventListener('mouseleave', () => {
         isDown = false;
 
     });
-
     scrollContainer.addEventListener('mouseup', () => {
         isDown = false;
 
     });
-
     scrollContainer.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
@@ -142,7 +136,6 @@
         const walk = (x - startX) * 3; //scroll-fast
         scrollContainer.scrollLeft = scrollLeft - walk;
     });
-
 </script>
 
 </html>
