@@ -1,0 +1,130 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resetting margins and padding, setting box-sizing to border-box */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+/* Setting base styles for html */
+html {
+    font-size: 62.5%;
+    font-family: 'Asap', 'sans-serif';
+    box-sizing: border-box;
+}
+
+/* Setting base styles for body */
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Profile Section */
+.profile {
+    position: relative;
+    line-height: 0;
+}
+
+/* Profile Image */
+.profile>img {
+    height: 272px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(0.7);
+}
+
+/* Profile Info Section */
+.profile__info {
+    position: absolute;
+    bottom: 0;
+    margin-left: 272px;
+    color: #fff;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Profile Name */
+.profile__info .name {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.8px;
+}
+
+/* About Section */
+.profile__info .about {
+    margin-bottom: 42px;
+}
+
+/* About Text */
+.profile__info span {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* About Text - Strong */
+.profile__info span strong {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* First Span Margin */
+.profile__info span:first-child {
+    margin-right: 24px;
+}
+
+/* Navigation Section */
+nav {
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+/* Avatar Section */
+.avatar {
+    width: 204px;
+    height: 170px;
+    background-color: #ccc;
+    margin-left: 52px;
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    bottom: 0;
+    object-position: center center;
+    object-fit: cover;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    background-color: #fff;
+    list-style: none;
+    margin: 0 52px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* Navigation Menu Item */
+nav ul li {
+    padding: 12px;
+}
+
+/* Navigation Menu Link */
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Menu Item Hover Effect */
+nav ul li:hover a {
+    color: #DD5E56;
+    padding-bottom: 9px;
+    border-bottom: 3px solid currentColor;
+}
