@@ -1,3 +1,4 @@
+/* Global reset and box-sizing */
 *,
 *::before,
 *::after {
@@ -6,24 +7,29 @@
     box-sizing: inherit;
 }
 
+/* Define primary color variable */
 :root {
     --primary-color: #F1A83B;
 }
 
+/* Base styles for the html element */
 html {
     font-size: 62.5%;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
 
+/* Utility class for margin-top */
 .mt-40 {
     margin-top: 40px;
 }
 
+/* Base font size for the body */
 body {
     font-size: 1.4rem;
 }
 
+/* Styles for the header section */
 .head {
     display: flex;
     flex-direction: column;
@@ -31,18 +37,20 @@ body {
     padding: 40px 40px 60px 40px;
 }
 
+/* Main heading styles */
 .heading {
     font-size: 2.8rem;
     letter-spacing: 0.5px;
     color: #323232;
 }
 
-
+/* Subheading styles */
 .sub-heading {
     color: #5a5a5a;
     padding-top: 16px;
 }
 
+/* Styles for each card */
 .card {
     display: flex;
     flex-direction: column;
@@ -52,6 +60,7 @@ body {
     padding: 32px;
 }
 
+/* Styles for the card icon */
 .card__icon {
     border: 2px solid var(--primary-color);
     height: 130px;
@@ -63,20 +72,24 @@ body {
     align-items: center;
 }
 
+/* Icon inside the card */
 .card__icon i {
     font-size: 5rem;
     color: var(--primary-color);
 }
 
+/* Heading inside the card */
 .card__heading {
     margin-top: 32px;
 }
 
+/* Description inside the card */
 .card__des {
     margin-top: 24px;
     color: #7c7c7c;
 }
 
+/* Button inside the card */
 .card__btn {
     background-color: var(--primary-color);
     padding: 16px 32px;
@@ -88,6 +101,7 @@ body {
     margin-top: 36px;
 }
 
+/* Media query for smaller screens */
 @media (max-width: 740px) {
     .card {
         box-shadow: none;
@@ -95,6 +109,7 @@ body {
     }
 }
 
+/* Media query for medium screens */
 @media (max-width: 1113px) {
     .card {
         margin-top: 32px;

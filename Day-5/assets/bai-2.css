@@ -1,3 +1,4 @@
+/* Global reset and box-sizing */
 *,
 *::before,
 *::after {
@@ -6,20 +7,26 @@
     box-sizing: inherit;
 }
 
+/* Base styles for the html element */
 html {
     font-size: 62.5%;
+    /* 1rem = 10px */
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
 
+/* Base font size for the body */
 body {
     font-size: 1.4rem;
+    /* 14px */
 }
 
+/* Utility class to hide elements */
 .none {
     display: none !important;
 }
 
+/* Styles for the main container */
 .main {
     display: block;
     padding: 0;
@@ -27,10 +34,12 @@ body {
     margin: 0 auto;
 }
 
+/* Styles for each card */
 .card {
     margin-top: 8px;
 }
 
+/* Styles for the card header */
 .card__head {
     padding: 8px 14px;
     background-color: rgb(255, 124, 77);
@@ -38,18 +47,21 @@ body {
     cursor: pointer;
 }
 
+/* Styles for the card buttons */
 .card__btn {
     font-size: 2rem;
     font-weight: bolder;
     display: inline-block;
 }
 
+/* Styles for the card heading */
 .card__heading {
     padding-left: 8px;
     display: inline-block;
     font-weight: 400;
 }
 
+/* Styles for the card body */
 .card__body {
     padding: 16px;
 }
