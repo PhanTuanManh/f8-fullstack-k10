@@ -9,32 +9,38 @@
 </head>
 
 <body>
+    <!-- Main container for the cards -->
     <div class="main">
+        <!-- Card 1 -->
         <div class="card">
+            <!-- Card Header -->
             <div class="card__head">
+                <!-- Button to open the card -->
                 <div class="card__btn btn__open"> + </div>
+                <!-- Button to close the card -->
                 <div class="card__btn btn__close none"> - </div>
+                <!-- Card Heading -->
                 <h3 class="card__heading">How to set random color</h3>
             </div>
+            <!-- Card Body (Initially Hidden) -->
             <div class="card__body none">
+                <!-- Description -->
                 <p class="card__des">
                     To set random colors: <br>
-                    1) Add <b>jag-faq-random-colors</b> class. <br>
+                    1) Add <strong>jag-faq-random-colors</strong> class. <br>
                     2) To change color, open theme(num).css, find "jag-faq-random-colors". <br>
                     3) You can change color from here. <br>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit,
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit,
                 </p>
             </div>
         </div>
 
+        <!-- Card 2 (Same structure as Card 1) -->
         <div class="card">
             <div class="card__head">
                 <div class="card__btn btn__open"> + </div>
@@ -48,18 +54,16 @@
                     2) To change color, open theme(num).css, find "jag-faq-random-colors". <br>
                     3) You can change color from here. <br>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit,
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit,
                 </p>
             </div>
         </div>
 
+        <!-- Card 3 (Same structure as Card 1) -->
         <div class="card">
             <div class="card__head">
                 <div class="card__btn btn__open"> + </div>
@@ -73,14 +77,11 @@
                     2) To change color, open theme(num).css, find "jag-faq-random-colors". <br>
                     3) You can change color from here. <br>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit,
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit,
                 </p>
             </div>
         </div>
@@ -88,21 +89,29 @@
 </body>
 
 <script>
+    // Ensure the DOM is fully loaded before running the script
     document.addEventListener("DOMContentLoaded", () => {
+        // Select all elements with the class "card"
         const cards = document.querySelectorAll(".card");
 
+        // Loop through each card
         cards.forEach((card) => {
+            // Select the elements inside each card
             const cardHead = card.querySelector(".card__head");
             const cardBody = card.querySelector(".card__body");
             const openBtn = card.querySelector(".btn__open");
             const closeBtn = card.querySelector(".btn__close");
 
+            // Add a click event listener to the card header
             cardHead.addEventListener("click", () => {
+                // Check if the open button is hidden
                 if (openBtn.classList.contains("none")) {
+                    // If it is, show the open button, hide the close button, and hide the card body
                     openBtn.classList.remove("none");
                     closeBtn.classList.add("none");
                     cardBody.classList.add("none");
                 } else {
+                    // If the open button is visible, hide the open button, show the close button, and show the card body
                     openBtn.classList.add("none");
                     closeBtn.classList.remove("none");
                     cardBody.classList.remove("none");
@@ -110,10 +119,7 @@
             });
         });
     });
-
-
-
-
 </script>
+
 
 </html>

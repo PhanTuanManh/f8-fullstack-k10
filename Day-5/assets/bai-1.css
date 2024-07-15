@@ -1,3 +1,4 @@
+/* Apply to all elements and their before and after pseudo-elements */
 *,
 *::before,
 *::after {
@@ -6,6 +7,7 @@
     box-sizing: inherit;
 }
 
+/* Set base styles for the html element */
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%;
@@ -13,12 +15,14 @@ html {
     background: url("./maxresdefault.jpg") no-repeat top / cover;
 }
 
+/* Style for the wrapper div */
 .wrapper {
     min-height: 100dvh;
     position: relative;
     width: 100%;
 }
 
+/* Style for the card div */
 .card {
     background-color: rgba(255, 255, 255, 0.5);
     width: 33%;
@@ -35,11 +39,13 @@ html {
     -moz-box-shadow: -7px 19px 34px 6px rgba(0, 0, 0, 0.62);
 }
 
+/* Style for the h2 element */
 h2 {
     font-size: 4rem;
     font-weight: bold;
 }
 
+/* Style for the span element */
 span {
     display: block;
     padding-top: 34px;
@@ -47,6 +53,7 @@ span {
     font-weight: bold;
 }
 
+/* Style for the a element */
 a {
     color: black;
 }
