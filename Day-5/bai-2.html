@@ -101,37 +101,4 @@
     </div>
 </body>
 
-<script>
-    // Ensure the DOM is fully loaded before running the script
-    document.addEventListener("DOMContentLoaded", () => {
-        // Select all elements with the class "card"
-        const cards = document.querySelectorAll(".card");
-
-        // Loop through each card
-        cards.forEach((card) => {
-            // Select the elements inside each card
-            const cardHead = card.querySelector(".card__head");
-            const cardBody = card.querySelector(".card__body");
-            const openBtn = card.querySelector(".btn__open");
-            const closeBtn = card.querySelector(".btn__close");
-
-            // Add a click event listener to the card header
-            cardHead.addEventListener("click", () => {
-                // Check if the open button is hidden
-                if (openBtn.classList.contains("none")) {
-                    // If it is, show the open button, hide the close button, and hide the card body
-                    openBtn.classList.remove("none");
-                    closeBtn.classList.add("none");
-                    cardBody.classList.add("none");
-                } else {
-                    // If the open button is visible, hide the open button, show the close button, and show the card body
-                    openBtn.classList.add("none");
-                    closeBtn.classList.remove("none");
-                    cardBody.classList.remove("none");
-                }
-            });
-        });
-    });
-</script>
-
 </html>
