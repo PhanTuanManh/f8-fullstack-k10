@@ -21,11 +21,6 @@ body {
     /* 14px */
 }
 
-/* Utility class to hide elements */
-.none {
-    display: none !important;
-}
-
 /* Styles for the main container */
 .main {
     display: block;
@@ -39,29 +34,44 @@ body {
     margin-top: 8px;
 }
 
-/* Styles for the card header */
-.card__head {
+/* Styles for the label card heading */
+label {
     padding: 8px 14px;
     background-color: rgb(255, 124, 77);
     color: #fff;
     cursor: pointer;
-}
-
-/* Styles for the card buttons */
-.card__btn {
-    font-size: 2rem;
-    font-weight: bolder;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 /* Styles for the card heading */
 .card__heading {
-    padding-left: 8px;
     display: inline-block;
     font-weight: 400;
+}
+
+/* Styles for the card heading before element */
+.card__heading::before {
+    content: "+";
+    font-weight: 800;
+    font-size: 2rem;
+    padding-right: 8px;
+    min-width: 20px;
+    display: inline-block;
+}
+
+/* Change content when input checked */
+input[type="checkbox"]:checked~label h3::before {
+    content: "-";
 }
 
 /* Styles for the card body */
 .card__body {
     padding: 16px;
+    display: none;
+}
+
+/* Display the card body when input checked */
+input[type="checkbox"]:checked~.card__body {
+    display: block;
 }
