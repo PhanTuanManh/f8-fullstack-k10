@@ -1,6 +1,16 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Root Variables */
+:root {
+    --primary-color: #DDDDDD;
+    --secondary-color: #EA3F32;
+    --third-color: #333333;
+    --font-color: #b0b0b0;
+}
+
+/* Global Reset and Box Sizing */
 *,
 *::before,
 *::after {
@@ -9,28 +19,25 @@
     box-sizing: inherit;
 }
 
-:root {
-    --primary-color: #DDDDDD;
-    --secondary-color: #EA3F32;
-    --third-color: #333333;
-    --font-color: #b0b0b0;
-}
-
+/* HTML Defaults */
 html {
     font-size: 62.5%;
     font-family: "Lato", sans-serif;
     box-sizing: border-box;
 }
 
+/* Icon Alignment */
 .icon-top {
     align-items: baseline !important;
     padding-top: 16px;
 }
 
+/* Font Size Utility Class */
 .ft-12 {
     font-size: 1.2rem !important;
 }
 
+/* Main Container Styling */
 .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -42,18 +49,21 @@ html {
     font-size: 1.4rem;
 }
 
+/* Card Styling */
 .card {
     max-width: 526px;
     padding: 18px 40px 40px;
     border: 1px solid var(--font-color);
 }
 
+/* Card Header Styling */
 .card__head {
     font-family: Lobster, sans-serif;
     font-size: 3.2rem;
     color: var(--third-color);
 }
 
+/* Card Sub-header Styling */
 .card__sub-head {
     color: var(--font-color);
     margin-top: 22px;
@@ -63,8 +73,7 @@ html {
     color: var(--secondary-color);
 }
 
-.card__form {}
-
+/* Form Row Styling */
 .row {
     margin-top: 24px;
     display: flex;
@@ -76,6 +85,7 @@ html {
     width: 100%;
 }
 
+/* Form Input Container Styling */
 .form__input {
     display: flex;
     align-items: center;
@@ -83,6 +93,7 @@ html {
     width: 100%;
     align-items: stretch;
     position: relative;
+    transition: border-color .3s ease;
 }
 
 .form__input:hover,
@@ -91,16 +102,7 @@ html {
     cursor: pointer;
 }
 
-.form__input:hover .input__icon,
-.form__input:focus .input__icon {
-    background-color: var(--third-color);
-}
-
-.form__input:hover .input__wrapper i,
-.form__input:focus .input__wrapper i {
-    color: var(--third-color);
-}
-
+/* Tooltip Styling */
 .guide {
     display: none;
     position: absolute;
@@ -110,6 +112,7 @@ html {
     top: -90%;
     left: 20%;
     transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease;
 }
 
 .guide::after {
@@ -124,8 +127,10 @@ html {
 
 .form__input:hover .guide {
     display: block;
+
 }
 
+/* Input Icon Styling */
 .input__icon {
     background-color: var(--primary-color);
     width: 48px;
@@ -133,12 +138,19 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color .3s ease;
+}
+
+.form__input:hover .input__icon,
+.form__input:focus .input__icon {
+    background-color: var(--third-color);
 }
 
 .input__icon i {
     color: #fff;
 }
 
+/* Input Wrapper Styling */
 .input__wrapper {
     display: flex;
     width: 100%;
@@ -155,6 +167,7 @@ html {
     outline: none;
 }
 
+/* Select Dropdown Styling */
 .input__wrapper select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -162,11 +175,11 @@ html {
     color: var(--font-color);
 }
 
+/* Textarea Styling */
 .input__wrapper textarea {
     resize: none;
     height: 180px;
 }
-
 
 .input__wrapper input::placeholder,
 .input__wrapper textarea::placeholder {
@@ -180,7 +193,12 @@ html {
     color: var(--primary-color);
 }
 
+.form__input:hover .input__wrapper i,
+.form__input:focus .input__wrapper i {
+    color: var(--third-color);
+}
 
+/* Checkbox Container Styling */
 .checkbox-container {
     display: block;
     width: 100%;
@@ -227,10 +245,22 @@ html {
     transform: rotate(45deg);
 }
 
+/* Button Styling */
 input[type="button"] {
     padding: 10px 34px;
     border: none;
     background-color: var(--secondary-color);
     color: #fff;
     cursor: pointer;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
