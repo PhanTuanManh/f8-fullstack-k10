@@ -1,15 +1,24 @@
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
+/* Root variables */
 :root {
     --ff-h: 'Space Grotesk', 'sans-serif';
+    /* Font family for headings */
     --ff-t: 'Inter', 'sans-serif';
+    /* Font family for text */
     --primary-color: #AA7C69;
+    /* Primary color */
     --h-color: #0A0B21;
+    /* Heading color */
     --t-color: #868689;
-    --border-color: #EFEFF2
+    /* Text color */
+    --border-color: #EFEFF2;
+    /* Border color */
 }
 
+/* Reset styles */
 *,
 *::after,
 *::before {
@@ -18,8 +27,187 @@
     box-sizing: inherit;
 }
 
+/* HTML settings */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: var(--ff-t);
+}
+
+/* Utility class to hide elements */
+.none {
+    display: none !important;
+}
+
+/* Card container */
+.card {
+    margin-top: 36px;
+    padding: 42px 40px 36px;
+    border: 2px solid #e6e6e6;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Hover effect for card */
+.card:hover {
+    border: none;
+    justify-content: space-between;
+}
+
+/* Overlay on hover */
+.card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(151, 90, 74, 0.8);
+    z-index: -9;
+    animation: fadeIn .3s ease;
+}
+
+/* Inner border for card */
+.card-inner-border {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+    border: 1px solid #ffffff;
+    pointer-events: none;
+}
+
+/* Icon styles */
+.card .card__icon {
+    font-size: 4.8rem;
+    color: var(--primary-color);
+}
+
+/* Text container styles */
+.card .card__text {
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Text styles on hover */
+.card:hover .card__text {
+    margin: 0;
+    transform: translateY(-40%);
+}
+
+/* Text color change on hover */
+.card:hover .card__text,
+.card:hover .card__text span {
+    color: #fff;
+}
+
+/* Heading styles */
+.card__text .heading {
+    font-family: var(--ff-h);
+    font-size: 2.2rem;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+    transition: color .3s linear;
+}
+
+/* Description text styles */
+.card__text .des {
+    display: block;
+    margin-top: 11px;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--t-color);
+    margin-bottom: 18px;
+    transition: color .3s linear;
+}
+
+/* Link container styles */
+.card .card__link {
+    display: none;
+    align-items: center;
+    color: #fff;
+    justify-self: flex-end;
+}
+
+/* Link display on hover */
+.card:hover .card__link {
+    display: flex !important;
+    animation: floatUp .3s ease;
+}
+
+/* Link text styles */
+.card__link a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    padding-right: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Arrow container styles */
+.card__link .arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    transition: background-color .3s ease, color .3s ease;
+    cursor: pointer;
+}
+
+/* Arrow hover styles */
+.arrow:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Image styles */
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -99;
+    display: none;
+}
+
+/* Image display on hover */
+.card:hover img {
+    display: block;
+    animation: fadeIn .8s ease;
+}
+
+/* Keyframes for fade in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for float up effect */
+@keyframes floatUp {
+    0% {
+        transform: translateY(20%);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
