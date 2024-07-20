@@ -148,13 +148,3 @@ body {
     aspect-ratio: 4/7;
     background: url('https://picsum.photos/500') no-repeat center center/cover;
 }
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
