@@ -37,6 +37,11 @@ html {
     font-size: 1.2rem !important;
 }
 
+input,
+button {
+    font-family: "Lato", sans-serif;
+}
+
 /* Main Container Styling */
 .main {
     max-width: 1200px;
@@ -81,10 +86,6 @@ html {
     width: 100%;
 }
 
-.row>label {
-    width: 100%;
-}
-
 /* Form Input Container Styling */
 .form__input {
     display: flex;
@@ -97,7 +98,7 @@ html {
 }
 
 .form__input:hover,
-.form__input:focus {
+.form__input:focus-within {
     border: 1px solid var(--third-color);
     cursor: pointer;
 }
@@ -127,7 +128,6 @@ html {
 
 .form__input:hover .guide {
     display: block;
-
 }
 
 /* Input Icon Styling */
@@ -142,7 +142,7 @@ html {
 }
 
 .form__input:hover .input__icon,
-.form__input:focus .input__icon {
+.form__input:focus-within .input__icon {
     background-color: var(--third-color);
 }
 
