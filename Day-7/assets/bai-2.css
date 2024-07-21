@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* Defining CSS variables for colors */
+:root {
+    --primary-bg: #ff574d;
+    --bg-color: #DA5B4E;
+    --h-cl: #272323;
+    --f-cl: #717171;
+}
+
+/* Resetting margins, paddings, and setting box-sizing for all elements */
 *,
 *::after,
 *::before {
@@ -8,25 +17,21 @@
     box-sizing: inherit;
 }
 
-:root {
-    --primary-bg: #ff574d;
-    --bg-color: #DA5B4E;
-    --h-cl: #272323;
-    --f-cl: #717171;
-}
-
+/* Setting base font size and box-sizing */
 html {
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: "Nunito", sans-serif;
 }
 
+/* Styling for text links */
 .link__text {
     font-size: 1.8rem;
     text-decoration: none;
     color: var(--f-cl);
 }
 
+/* Main container styling */
 .main {
     width: 100%;
     min-height: 100dvb;
@@ -36,6 +41,7 @@ html {
     background: url("../assets/login-bg2.jpg") no-repeat bottom;
 }
 
+/* Card container styling */
 .card {
     display: flex;
     background-color: #fff;
@@ -44,7 +50,7 @@ html {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-/* Card__about */
+/* Styling for the about section within the card */
 .card .card__about {
     background-color: var(--primary-bg);
     padding: 110px 22px;
@@ -54,35 +60,42 @@ html {
     box-shadow: rgba(255, 0, 0, 0.27) 0px 7px 29px 0px;
 }
 
+/* Center-aligning text in the about section */
 .card__about-head,
 .card__about-body {
     text-align: center;
 }
 
+/* Styling the header within the about section */
 .card__about-head {
     display: flex;
     justify-content: center;
 }
 
+/* Icon styling in card about head */
 .card__about-head i {
     font-size: 5.4rem;
     margin-right: 10px;
 }
 
+/* Header styling in card about head */
 .card__about-head h2 {
     font-size: 4rem;
 }
 
+/* Margin for card about body */
 .card .card__about-body {
     margin-top: 20px;
 }
 
+/* Paragraph styling in card about body */
 .card__about-body p {
     font-size: 2rem;
     line-height: 1.5;
     text-align: center;
 }
 
+/* Button styling in card about body */
 .about__btn {
     border: none;
     color: var(--primary-bg);
@@ -96,12 +109,14 @@ html {
     cursor: pointer;
 }
 
+/* Navigation list styling in card about body */
 .card__about-body nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
+/* List item styling in card about body */
 .card__about-body nav ul li {
     display: block;
     background-color: var(--bg-color);
@@ -115,11 +130,12 @@ html {
     margin: 0 8px 16px;
 }
 
+/* Anchor link styling in card about body list items */
 .card__about-body nav ul li a {
     color: #fff;
 }
 
-/* Card__arrow */
+/* Styling for the card arrow */
 .card__arrow {
     position: absolute;
     background-color: #fff;
@@ -139,12 +155,13 @@ html {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect for card arrow */
 .card__arrow:hover {
     background-color: var(--primary-bg);
     color: #fff;
 }
 
-/* Card__login */
+/* Styling for the card login section */
 .card__login {
     display: flex;
     flex-direction: column;
@@ -153,6 +170,7 @@ html {
     max-width: 572px;
 }
 
+/* Title styling for the card login */
 .card__login h3 {
     font-size: 2.8rem;
     position: relative;
@@ -161,10 +179,12 @@ html {
     color: var(--h-cl);
 }
 
+/* Span styling in card login title */
 .card__login h3 span {
     color: var(--primary-bg);
 }
 
+/* After pseudo-element for card login title */
 .card__login h3::after {
     content: "";
     background-color: var(--primary-bg);
@@ -175,6 +195,7 @@ html {
     left: 43%;
 }
 
+/* Input field styling for email and password */
 .card__login input[type="email"],
 .card__login input[type="password"] {
     margin-top: 26px;
@@ -188,6 +209,7 @@ html {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+/* Styling for the sub-input section in login */
 .card__login .login__sub-input {
     display: flex;
     width: 100%;
@@ -198,21 +220,25 @@ html {
     margin: 30px 0;
 }
 
+/* Checkbox container styling */
 .checkbox-container {
     display: flex;
     align-items: center;
 }
 
+/* Checkbox item styling */
 .checkbox-item {
     display: block;
     cursor: pointer;
     position: relative;
 }
 
+/* Custom checkbox input */
 .checkbox-custom {
     display: none;
 }
 
+/* Styling before the checkbox item */
 .checkbox-item::before {
     content: "";
     margin-right: 9px;
@@ -226,6 +252,7 @@ html {
     top: -1.6px;
 }
 
+/* Icon inside checkbox item */
 .checkbox-item i {
     position: absolute;
     left: 3px;
@@ -233,10 +260,12 @@ html {
     display: none;
 }
 
+/* Show icon when checkbox is checked */
 .checkbox-item .checkbox-custom:checked~i {
     display: block;
 }
 
+/* Styling for the login button */
 .login__btn {
     font-size: 2rem;
     text-transform: uppercase;
@@ -251,10 +280,12 @@ html {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect for the login button */
 .login__btn:hover {
     background-color: var(--bg-color);
 }
 
+/* Styling for the sign-up section */
 .sign-up {
     font-size: 1.8rem;
     margin-top: 30px;

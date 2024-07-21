@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Roboto, sans-serif;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px auto;
+        }
+
+        .box .content {
+            border: 1px solid red;
+            padding: 10px;
+            overflow: auto;
+            max-width: 400px;
+            color: #000;
+        }
+
+        .box .float {
+            display: float;
+        }
+
+        .image {
+            background-image: url('https://picsum.photos/200/300');
+            margin-right: 10px;
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+            <span class="float"><span class="image"></span></span>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

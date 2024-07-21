@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Resetting margins, paddings, and setting box-sizing for all elements */
 *,
 *::after,
 *::before {
@@ -8,23 +9,27 @@
     box-sizing: inherit;
 }
 
+/* Defining CSS variables for colors */
 :root {
     --bgh-color: #2da5da;
     --f-color: #666;
     --border-color: #e5e4e4;
 }
 
+/* Setting base font size and box-sizing */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
 
+/* Setting max-width and centering the body content */
 body {
     max-width: 1500px;
     margin: 0 auto;
 }
 
+/* Styling the header */
 header {
     margin-top: 10px;
     display: flex;
@@ -32,11 +37,13 @@ header {
     border: 1px solid var(--border-color);
 }
 
+/* Ensuring the nav takes full width and height */
 header nav {
     width: 100%;
     height: 100%;
 }
 
+/* Styling the main navigation list */
 header nav .list {
     display: flex;
     width: 100%;
@@ -45,6 +52,7 @@ header nav .list {
     align-items: inherit;
 }
 
+/* Styling each list item in the navigation */
 header nav .list .list__item {
     display: block;
     font-size: 1.5rem;
@@ -54,14 +62,17 @@ header nav .list .list__item {
     padding: 6px;
 }
 
+/* Special styling for the first list item */
 .list__item:first-child {
     padding: 0 4px;
 }
 
+/* Ensuring the icon in the first list item has no margin */
 .list__item:first-child i {
     margin: 0 !important;
 }
 
+/* Special styling for the last list item */
 .list__item:last-child {
     margin-left: auto;
     margin-right: 0;
@@ -69,35 +80,41 @@ header nav .list .list__item {
     border-left: 1px solid var(--border-color);
 }
 
+/* Padding for anchor tags inside list items */
 .list__item>a {
     padding: 16px 22px;
 }
 
+/* Styling for all anchor tags */
 .list__item a {
     text-decoration: none;
     color: var(--f-color);
     display: flex;
     align-items: center;
     height: 100%;
-
 }
 
+/* Margin for icons inside no-chevron class */
 .list__item .no-chevron i {
     margin-right: 12px;
 }
 
+/* Margin for the first icon inside has-chevron class */
 .list__item .has-chevron i:first-child {
     margin-right: 10px;
 }
 
+/* Margin for the last icon inside has-chevron class */
 .list__item .has-chevron i:last-child {
     margin-left: 10px;
 }
 
+/* Font size for the second child icon inside anchor tags */
 .list__item a i:nth-child(2) {
     font-size: 1rem;
 }
 
+/* Styling the sub-navigation */
 .list__item .subnav {
     position: absolute;
     list-style: none;
@@ -107,6 +124,7 @@ header nav .list .list__item {
     display: none;
 }
 
+/* Adding pseudo-element before subnav for hover area */
 .subnav::before {
     content: "";
     position: absolute;
@@ -118,6 +136,7 @@ header nav .list .list__item {
     display: none;
 }
 
+/* Adding pseudo-element after subnav for hover area */
 .subnav::after {
     content: "";
     position: absolute;
@@ -129,25 +148,30 @@ header nav .list .list__item {
     display: none;
 }
 
+/* Styling each subnav list item */
 .list__item .subnav li {
     display: block;
     border-bottom: 1px solid var(--border-color);
     padding: 24px;
 }
 
+/* Removing border for the last subnav list item */
 .list__item .subnav li:last-child {
     border: none !important;
 }
 
+/* Margin for icons inside subnav list items */
 .list__item .subnav li i {
     margin-right: 12px;
 }
 
+/* Hover effect for main navigation items */
 .list__item:hover>a {
     background-color: var(--bgh-color);
     color: #fff;
 }
 
+/* Displaying the subnav on hover */
 .list__item:hover .subnav,
 .list__item:hover .subnav::after,
 .list__item:hover .subnav::before {
@@ -155,6 +179,7 @@ header nav .list .list__item {
     animation: fadeIn 0.5s forwards;
 }
 
+/* Fade-in animation for the subnav */
 @keyframes fadeIn {
     from {
         opacity: 0;
