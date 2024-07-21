@@ -18,29 +18,112 @@ html {
     box-sizing: border-box;
     background-color: var(--primary-color);
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100dvh;
+    overflow: hidden;
 }
 
 main {
-    overflow: hidden;
     position: relative;
 }
 
 nav {
     font-size: 1.6rem;
     display: inline-block;
-    background-color: var(--secondary-color);
     color: var(--primary-color);
-    padding: 16px 32px 32px 16px;
+}
+
+.menu-icon .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
     border-bottom-right-radius: 9999px;
+    background-color: var(--secondary-color);
+    transform-origin: top left;
+    transition: transform 0.3s ease-in-out;
+}
+
+#checkbox:checked~.background {
+    transform: scale(80);
+}
+
+#checkbox {
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+}
+
+.menu-icon .container {
+    display: block;
     position: relative;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 24px;
 }
 
-nav:hover {
-    transform: scale(10);
+#checkbox:checked~.container #top {
+    animation: top .3s linear forwards;
 }
 
-nav i {
-    font-size: 2.8rem;
+#checkbox:checked~.container #middle {
+    animation: middle .3s linear forwards;
+}
+
+#checkbox:checked~.container #bottom {
+    animation: bottom .3s linear forwards;
+}
+
+#checkbox:not(:checked)~.container #top {
+    animation: topback 0.3s ease forwards;
+}
+
+#checkbox:not(:checked)~.container #middle {
+    animation: middleback 0.3s ease forwards;
+}
+
+#checkbox:not(:checked)~.container #bottom {
+    animation: bottomback 0.3s ease forwards;
+}
+
+.menu ul {
+    display: none;
+    list-style-type: none;
+}
+
+#checkbox:checked~.menu ul {
+    display: block;
+
+}
+
+.menu ul li {
+    display: block;
+    padding: 8px 0;
+    min-width: 200px;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    padding: 4px 64px 4px 34px;
+}
+
+.menu ul li a:hover {
+    background-color: #e5e5e5;
+}
+
+.container span {
+    display: block;
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background-color: var(--primary-color);
+    margin-bottom: 5px;
+    transition: transform 0.3s ease, width 0.3s ease
 }
 
 .content {
@@ -51,6 +134,7 @@ nav i {
     color: var(--secondary-color);
     text-align: right;
 }
+
 
 .content h1 {
     font-size: 50px;
@@ -65,4 +149,135 @@ nav i {
 .content p span {
     font-size: 16px;
     line-height: 2;
+}
+
+@keyframes top {
+    0% {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+
+    33% {
+        width: 40%;
+        transform: translate(18px, 7px);
+    }
+
+    66% {
+        width: 50%;
+        transform: rotate(120deg) translate(10px, -19px);
+    }
+
+    100% {
+        width: 60%;
+        transform: translate(-3px, 15px) rotate(225deg);
+    }
+}
+
+@keyframes topback {
+    100% {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+
+    66% {
+        width: 40%;
+        transform: translate(18px, 7px);
+    }
+
+    33% {
+        width: 50%;
+        transform: rotate(120deg) translate(10px, -19px);
+    }
+
+    0% {
+        width: 60%;
+        transform: translate(-3px, 15px) rotate(225deg);
+    }
+}
+
+
+@keyframes middle {
+    0% {
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    33% {
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    66% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        width: 100%;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes middleback {
+    100% {
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    66% {
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(90deg);
+    }
+
+    0% {
+        width: 100%;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes bottom {
+    0% {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+
+    33% {
+        width: 40%;
+        transform: translate(18px, -7px);
+    }
+
+    66% {
+        width: 50%;
+        transform: rotate(60deg) translate(0px, -4px);
+    }
+
+    100% {
+        width: 60%;
+        transform: translate(-3px, -15px) rotate(135deg);
+    }
+}
+
+@keyframes bottomback {
+    100% {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+
+    66% {
+        width: 40%;
+        transform: translate(18px, -7px);
+    }
+
+    33% {
+        width: 50%;
+        transform: rotate(60deg) translate(0px, -4px);
+    }
+
+    0% {
+        width: 60%;
+        transform: translate(-3px, -15px) rotate(135deg);
+    }
 }
