@@ -43,6 +43,7 @@ nav {
     background-color: var(--secondary-color);
     transform-origin: top left;
     transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #checkbox:checked~.background {
