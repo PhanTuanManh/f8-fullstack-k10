@@ -126,7 +126,7 @@ button {
     border-color: var(--third-color) transparent transparent transparent;
 }
 
-.form__input:hover .guide {
+.form__input:focus-within .guide {
     display: block;
 }
 
