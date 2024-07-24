@@ -24,6 +24,12 @@ html {
     font-family: "Nunito", sans-serif;
 }
 
+/* Setting base font-family for button and input */
+input,
+button {
+    font-family: "Nunito", sans-serif;
+}
+
 /* Styling for text links */
 .link__text {
     font-size: 1.8rem;
