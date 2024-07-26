@@ -42,7 +42,7 @@ nav ul li {
     outline: 1px solid #e8e8e8;
 }
 
-nav ul li a {
+nav ul li label {
     display: block;
     padding: 14px 14px;
     font-size: 1.5rem;
@@ -50,7 +50,12 @@ nav ul li a {
     color: var(--f-color)
 }
 
-nav ul li a:hover {
+nav ul li label:hover {
+    background-color: var(--bg-h-color);
+    color: #fff;
+}
+
+.radio:checked~label {
     background-color: var(--bg-h-color);
     color: #fff;
 }
@@ -59,6 +64,8 @@ nav ul li a:hover {
     background-color: #fff;
     padding: 24px;
     overflow-x: scroll;
+    transform-origin: top center;
+    transform: perspective(700px) rotateX(-45deg) translateY(1px);
 }
 
 .body .heading {
@@ -74,16 +81,20 @@ nav ul li a:hover {
 .card {
     max-width: 700px;
     height: inherit;
-    /* display: none; */
+    display: none;
 }
 
 #Simples {
     display: block;
-    transform: perspective(700px) scale3d(1.5);
+}
+
+#Simples:hover {
+    display: block;
+    transform: perspective(700px) scale3d(1.5) rotateX('30deg');
 }
 
 .card:target {
-    display: block !important;
+    display: block;
 }
 
 .card:not(:target) {
