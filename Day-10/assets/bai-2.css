@@ -1,11 +1,14 @@
+/* Importing the Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Root variables for colors */
 :root {
     --bg-h-color: #4399DC;
     --h-color: #575757;
     --f-color: #5e5e5e;
 }
 
+/* Universal selector to reset padding and margin, and set box-sizing */
 *,
 *::after,
 *::before {
@@ -14,6 +17,7 @@
     margin: 0;
 }
 
+/* HTML settings for font size, box-sizing, font-family, and background color */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -21,27 +25,33 @@ html {
     background-color: #ccc;
 }
 
+/* Main container settings */
 .main {
     max-width: 700px;
     margin: 0 auto;
+    position: relative;
 }
 
+/* Navigation bar settings */
 nav {
     margin-top: 50px;
     background-color: #fff;
 }
 
+/* Unordered list settings in the navigation */
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
 }
 
+/* List item settings in the navigation */
 nav ul li {
     padding: 6px;
     outline: 1px solid #e8e8e8;
 }
 
+/* Label settings in the navigation list items */
 nav ul li label {
     display: block;
     padding: 14px 14px;
@@ -50,53 +60,52 @@ nav ul li label {
     color: var(--f-color)
 }
 
+/* Hover effect for labels in the navigation list items */
 nav ul li label:hover {
     background-color: var(--bg-h-color);
     color: #fff;
 }
 
-.radio:checked~label {
+/* Active state for the navigation labels based on the checked radio button */
+#simple:checked~nav ul li label[for="simple"],
+#algoritmo:checked~nav ul li label[for="algoritmo"],
+#barra:checked~nav ul li label[for="barra"],
+#capcha:checked~nav ul li label[for="capcha"] {
     background-color: var(--bg-h-color);
     color: #fff;
 }
 
-.body {
+/* Card settings */
+.card {
     background-color: #fff;
     padding: 24px;
     overflow-x: scroll;
     transform-origin: top center;
-    transform: perspective(700px) rotateX(-45deg) translateY(1px);
+    max-width: 700px;
+    height: inherit;
+    position: absolute;
+    transition: transform .7s ease, opacity .7s ease;
+    transform: perspective(700px) rotateX(-90deg) translateY(1px);
+    opacity: 0;
 }
 
-.body .heading {
+/* Heading inside the card */
+.card .heading {
     font-size: 3rem;
     color: var(--h-color);
 }
 
-.body .des {
+/* Description inside the card */
+.card .des {
     font-size: 1.4rem;
     line-height: 1.4;
 }
 
-.card {
-    max-width: 700px;
-    height: inherit;
-    display: none;
-}
-
-#Simples {
-    display: block;
-}
-
-#Simples:hover {
-    display: block;
-    transform: perspective(700px) scale3d(1.5) rotateX('30deg');
-}
-
-.card:target {
-    display: block;
-}
-
-.card:not(:target) {
-    display: none !important;
+/* Active state for cards based on the checked radio button */
+#simple:checked~#simpleCard,
+#algoritmo:checked~#algoritmoCard,
+#barra:checked~#barraCard,
+#capcha:checked~#capchaCard {
+    transform: perspective(700px) rotateX(0deg) translateY(1px);
+    opacity: 1;
 }

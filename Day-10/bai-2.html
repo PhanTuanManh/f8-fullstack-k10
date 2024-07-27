@@ -9,73 +9,77 @@
 </head>
 
 <body>
+    <!-- Main container for the content -->
     <div class="main">
+        <!-- Hidden radio buttons for toggling different content sections -->
+        <input type="radio" name="radio" class="radio" id="simple" checked hidden>
+        <input type="radio" name="radio" class="radio" id="algoritmo" hidden>
+        <input type="radio" name="radio" class="radio" id="barra" hidden>
+        <input type="radio" name="radio" class="radio" id="capcha" hidden>
+        <!-- Navigation menu -->
         <nav>
             <ul>
                 <li>
-                    <input type="radio" name="radio" class="radio" id="simple" hidden>
                     <label for="simple">Simples slideshow</label>
                 </li>
                 <li>
-                    <input type="radio" name="radio" class="radio" id="algoritmo" hidden>
                     <label for="algoritmo">Algoritmo de Levenshtein</label>
                 </li>
                 <li>
-                    <input type="radio" name="radio" class="radio" id="barra" hidden>
                     <label for="barra">Barra de progresso</label>
                 </li>
                 <li>
-                    <input type="radio" name="radio" class="radio" id="capcha" hidden>
                     <label for="capcha">Capcha com PHP</label>
                 </li>
             </ul>
         </nav>
-        <div class="body">
-            <div class="card" id="">
-                <h2 class="heading">
-                    Simples slideshow
-                </h2>
-                <div class="des">
-                    <p>Mais uma postagem simples e bem usual. Um sistema de slideshow fácil, rápido e leve, apenas
-                        com¡Query e CSS. <br>
-                        Poderá ser usado em banners laterais, animações de postagens e etc.
-                        Iniciando, vamos montar o CSS que definará a estrutura final do slide...</p>
-                </div>
+        <!-- Card for Simples slideshow content -->
+        <div class="card" id="simpleCard">
+            <h2 class="heading">
+                Simples slideshow
+            </h2>
+            <div class="des">
+                <p>Mais uma postagem simples e bem usual. Um sistema de slideshow fácil, rápido e leve, apenas
+                    com¡Query e CSS. <br>
+                    Poderá ser usado em banners laterais, animações de postagens e etc.
+                    Iniciando, vamos montar o CSS que definará a estrutura final do slide...</p>
             </div>
-            <div class="card" id="">
-                <h2 class="heading">
-                    Algoritmo de Levenshtein
-                </h2>
-                <div class="des">
-                    <p>Atualmente fazer buscas on-line tem se tornado algo muito comum, quase tudo na internet gira em
-                        tomo de simples buscas.<br>
-                        Então decidi publicar um sistema simples, porém muito interessante que deixará seu sistema de
-                        busca muito legal. <br>
-                        O PHP possui uma função nativa, levenshtein. seu manual mostra todos os detalhes do seu uso e
-                        implementação. </p>
-                </div>
+        </div>
+        <!-- Card for Algoritmo de Levenshtein content -->
+        <div class="card" id="algoritmoCard">
+            <h2 class="heading">
+                Algoritmo de Levenshtein
+            </h2>
+            <div class="des">
+                <p>Atualmente fazer buscas on-line tem se tornado algo muito comum, quase tudo na internet gira em
+                    tomo de simples buscas.<br>
+                    Então decidi publicar um sistema simples, porém muito interessante que deixará seu sistema de
+                    busca muito legal. <br>
+                    O PHP possui uma função nativa, levenshtein. seu manual mostra todos os detalhes do seu uso e
+                    implementação. </p>
             </div>
-            <div class="card" id="">
-                <h2 class="heading">
-                    Barra de progresso
-                </h2>
-                <div class="des">
-                    <p>Mais uma postagem simples e bem usual. Um sistema de slideshow fácil, rápido e leve, apenas
-                        com¡Query e CSS. <br>
-                        Poderá ser usado em banners laterais, animações de postagens e etc.
-                        Iniciando, vamos montar o CSS que definará a estrutura final do slide...</p>
-                </div>
+        </div>
+        <!-- Card for Barra de progresso content -->
+        <div class="card" id="barraCard">
+            <h2 class="heading">
+                Barra de progresso
+            </h2>
+            <div class="des">
+                <p>Uma barra de progresso pode ser um processo importante ao ocultar o carregamento de páginas ou/e
+                    arquivos.<br>
+                    Então ter uma barra de progresso responsiva e sem usar Jquery, apenas usando CSS3 e
+                    JavaScript. Isso sem dúvida deixaria a sua aplicação um pouquinho mais leve.</p>
             </div>
-            <div class="card" id="">
-                <h2 class="heading">
-                    Capcha com PHP
-                </h2>
-                <div class="des">
-                    <p>Mais uma postagem simples e bem usual. Um sistema de slideshow fácil, rápido e leve, apenas
-                        com¡Query e CSS. <br>
-                        Poderá ser usado em banners laterais, animações de postagens e etc.
-                        Iniciando, vamos montar o CSS que definará a estrutura final do slide...</p>
-                </div>
+        </div>
+        <!-- Card for Capcha com PHP content -->
+        <div class="card" id="capchaCard">
+            <h2 class="heading">
+                Capcha com PHP
+            </h2>
+            <div class="des">
+                <p>A postagem de hoje aborda um ponto importante para nós, que temos servidores públicos, que qualquer
+                    um pode acessar, comentar e etc.<br>
+                    Com esse sistema, sem dúvida seus formulários ganharão mais segurança contra spammers.</p>
             </div>
         </div>
     </div>
