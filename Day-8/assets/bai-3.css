@@ -1,6 +1,11 @@
 /* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: "SFUHelvetica";
+    src: url(./font/SFUHelveticaBold.TTF);
+}
+
 /* Defining root variables for color scheme */
 :root {
     --f-color: #443622;
