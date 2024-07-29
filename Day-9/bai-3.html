@@ -9,51 +9,87 @@
 </head>
 
 <body>
+    <!-- Main container for the header and form -->
     <div class="main">
+
+        <!-- Header section -->
         <div class="header">
+            <!-- Main heading for the contact form -->
             <h2 class="heading">Drop Us a Line</h2>
+            <!-- Sub-heading with additional information -->
             <p class="sub-heading">
                 Reach out to us from our contact form and we will get back to you shortly.
             </p>
         </div>
+
+        <!-- Form container -->
         <div class="form__container">
+            <!-- Form element with action attribute (currently a placeholder) -->
             <form action="#">
+
+                <!-- Row container for form inputs -->
                 <div class="row">
+
+                    <!-- Column for the first name input -->
                     <div class="col l-6">
+                        <!-- Form group for first name -->
                         <label class="form__group" for="firstName">
+                            <!-- First name input field -->
                             <input type="text" class="form__input" name="firstName" id="firstName" placeholder=" ">
+                            <!-- Label for first name input -->
                             <label for="firstName">First Name *</label>
                         </label>
                     </div>
+
+                    <!-- Column for the last name input -->
                     <div class="col l-6">
+                        <!-- Form group for last name -->
                         <label class="form__group" for="lastName">
+                            <!-- Last name input field -->
                             <input type="text" class="form__input" name="lastName" id="lastName" placeholder=" ">
+                            <!-- Label for last name input -->
                             <label for="lastName">Last Name *</label>
                         </label>
                     </div>
+
+                    <!-- Column for the email input -->
                     <div class="col l-6">
+                        <!-- Form group for email -->
                         <label class="form__group" for="email">
+                            <!-- Email input field -->
                             <input type="text" class="form__input" name="email" id="email" placeholder=" ">
+                            <!-- Label for email input -->
                             <label for="email">Email *</label>
                         </label>
                     </div>
+
+                    <!-- Column for the sales dropdown -->
                     <div class="col l-6">
+                        <!-- Form group for sales dropdown -->
                         <label class="form__group" for="sales">
+                            <!-- Sales dropdown field -->
                             <select name="sales" id="sales">
+                                <!-- Default option for sales dropdown -->
                                 <option value="default">Sales</option>
                             </select>
                         </label>
                     </div>
                 </div>
+
+                <!-- Form group for the message textarea -->
                 <label class="form__group" for="message">
+                    <!-- Message textarea field -->
                     <textarea name="message" id="message" placeholder=" "></textarea>
+                    <!-- Label for message textarea -->
                     <label for="message">Message *</label>
                 </label>
 
+                <!-- Submit button for the form -->
                 <button type="button">Send message</button>
             </form>
         </div>
     </div>
 </body>
+
 
 </html>

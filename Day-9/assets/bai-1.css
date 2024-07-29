@@ -1,6 +1,8 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
+/* Resetting default padding, margin, and box-sizing for all elements and their pseudo-elements */
 *,
 *::after,
 *::before {
@@ -9,28 +11,40 @@
     box-sizing: inherit;
 }
 
+/* Defining root variables for fonts and colors */
 :root {
     --ff-h: 'Space Grotesk', 'sans-serif';
+    /* Font for headings */
     --ff-t: 'Inter', 'sans-serif';
+    /* Font for text */
     --f-color: #B4B4B7;
+    /* Text color */
     --f-h-color: #07091F;
+    /* Heading color */
     --f-s-color: #8A8A8D;
+    /* Secondary text color */
     --b-tag-color: #F3F3F3;
+    /* Tag background color */
     --b-tag-h-color: #A26F5A;
+    /* Tag background color on hover */
 }
 
+/* Setting base font size and box-sizing for the document */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: var(--ff-t);
+    /* Default font for text */
 }
 
+/* Basic body styling */
 body {
     min-height: 100dvh;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Main container styling */
 .main {
     margin-top: 24px;
     display: flex;
@@ -38,10 +52,12 @@ body {
     width: 100%;
 }
 
+/* Each row represents an event in the timeline */
 .row {
     display: flex;
 }
 
+/* Hover effects for the row */
 .row:hover .content {
     transform: translateX(122%);
     text-align: left;
@@ -59,43 +75,53 @@ body {
 .row:hover .content .content__body .tag {
     color: #FFF;
     background-color: var(--b-tag-h-color);
-    transition: background-color .5s linear;
-    transition: color .5s linear;
+    transition: background-color .5s linear, color .5s linear;
     cursor: pointer;
 }
 
+/* Content styling */
 .row .content {
     text-align: right;
     transition: transform .3s ease;
 }
 
+/* Heading styling */
 .content .content__heading {
     font-size: 2.4rem;
     font-family: var(--ff-h);
+    /* Font for headings */
     font-weight: 900;
     letter-spacing: -0.8px;
     color: var(--f-h-color);
+    /* Heading color */
 }
 
+/* Body styling */
 .content .content__body {
     font-size: 1.4rem;
     color: var(--f-color);
+    /* Text color */
     margin-top: 12px;
     margin-bottom: 60px;
     min-width: 260px;
 }
 
+/* Tag styling */
 .content .content__body .tag {
     display: inline-block;
     margin-top: 18px;
     font-family: var(--ff-h);
+    /* Font for headings */
     color: var(--f-s-color);
+    /* Secondary text color */
     font-weight: 700;
     padding: 4px 12px;
     border-radius: 99px;
     background-color: var(--b-tag-color);
+    /* Tag background color */
 }
 
+/* Dot separating styling */
 .row .dot-separating {
     line-height: 2.4;
     height: 10px;
@@ -110,6 +136,7 @@ body {
     position: relative;
 }
 
+/* Dot separating vertical line styling */
 .dot-separating::before {
     content: "";
     position: absolute;
@@ -121,18 +148,22 @@ body {
     background-color: #e1e0e0;
 }
 
+/* Hiding the vertical line for the last row */
 .row:last-child .dot-separating::before {
     display: none !important;
 }
 
+/* Time styling */
 .row .content__time {
     line-height: 2.4;
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--f-s-color);
+    /* Secondary text color */
     transition: transform .3s ease;
 }
 
+/* Background image styling */
 .back__img {
     position: relative;
     width: 400px;
@@ -140,6 +171,7 @@ body {
     background: url('https://picsum.photos/800') no-repeat center center/cover;
 }
 
+/* Foreground image styling */
 .font__img {
     position: absolute;
     top: 20%;
