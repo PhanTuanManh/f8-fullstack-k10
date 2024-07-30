@@ -53,11 +53,82 @@ body {
     left: 0;
     transform-origin: bottom center;
     transform: rotateX(-180deg);
-    transition: transform .3s ease;
+    transition: transform .3s ease .3s;
+    overflow: auto;
+    z-index: 9;
 }
+
 
 .letter:hover .cover::before {
     transform: rotateX(0deg);
+    transition-delay: 0s;
+    z-index: 7;
+}
+
+.card-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    top: -310px;
+    overflow: hidden;
+}
+
+.card {
+    position: absolute;
+    width: 250px;
+    height: 280px;
+    background: #fff;
+    left: 25px;
+    top: 410px;
+    transform-origin: top;
+    transition: transform .3s linear;
+    z-index: 10;
+}
+
+.letter:hover .card {
+    transform: translateY(-230px);
+    transition-delay: .3s;
+}
+
+.head {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.parallelogram {
+    background-color: #C56B6E;
+    height: initial;
+    width: 20px;
+    transform: skew(-40deg);
+}
+
+.body {
+    height: 100%;
+    padding: 10px;
+}
+
+.rectangle_top {
+    background-color: #C56B6E;
+    width: 100px;
+    height: 18px;
+    margin-top: 6px;
+}
+
+.rectangle_bottom {
+    background-color: #C56B6E;
+    width: 50px;
+    height: 18px;
+    margin-top: 16px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #EECFCE;
+    transform: translate(170px, 60px);
 }
 
 .front {
@@ -69,7 +140,7 @@ body {
     left: 0;
     width: 0;
     height: 0;
-    z-index: 9;
+    z-index: 99;
 }
 
 .front::before {
