@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.btn-wrap {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px 40px;
+    background-color: green;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+span {
+    z-index: 1;
+}
+
+.btn-wrap::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    top: 0;
+    transform: translateX(-200px);
+    transition: transform .3s ease;
+}
+
+.btn-wrap:hover::after {
+    transform: translateX(0px);
+}

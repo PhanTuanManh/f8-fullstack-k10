@@ -1,10 +1,13 @@
+/* Importing the Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Defining root variables for primary and secondary colors */
 :root {
     --primary-color: #31A8F6;
     --secondary-color: #fff;
 }
 
+/* Setting default margin, padding, and box-sizing for all elements */
 *,
 *::after,
 *::before {
@@ -13,6 +16,7 @@
     box-sizing: inherit;
 }
 
+/* Setting the default font size, box-sizing, background color, and font family for the HTML element */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -22,16 +26,19 @@ html {
     overflow: hidden;
 }
 
+/* Setting relative positioning for the main element */
 main {
     position: relative;
 }
 
+/* Styling the navigation element */
 nav {
     font-size: 1.6rem;
     display: inline-block;
     color: var(--primary-color);
 }
 
+/* Styling the background of the menu icon */
 .menu-icon .background {
     position: absolute;
     z-index: -1;
@@ -46,16 +53,19 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* Scaling the background when the checkbox is checked */
 #checkbox:checked~.background {
     transform: scale(80);
 }
 
+/* Hiding the checkbox input */
 #checkbox {
     -webkit-appearance: none;
     display: none;
     visibility: hidden;
 }
 
+/* Styling the container of the menu icon */
 .menu-icon .container {
     display: block;
     position: relative;
@@ -65,46 +75,55 @@ nav {
     margin: 24px;
 }
 
+/* Animating the top bar when the checkbox is checked */
 #checkbox:checked~.container #top {
     animation: top .3s linear forwards;
 }
 
+/* Animating the middle bar when the checkbox is checked */
 #checkbox:checked~.container #middle {
     animation: middle .3s linear forwards;
 }
 
+/* Animating the bottom bar when the checkbox is checked */
 #checkbox:checked~.container #bottom {
     animation: bottom .3s linear forwards;
 }
 
+/* Animating the top bar when the checkbox is not checked */
 #checkbox:not(:checked)~.container #top {
     animation: topback 0.3s ease forwards;
 }
 
+/* Animating the middle bar when the checkbox is not checked */
 #checkbox:not(:checked)~.container #middle {
     animation: middleback 0.3s ease forwards;
 }
 
+/* Animating the bottom bar when the checkbox is not checked */
 #checkbox:not(:checked)~.container #bottom {
     animation: bottomback 0.3s ease forwards;
 }
 
+/* Hiding the menu list by default */
 .menu ul {
     display: none;
     list-style-type: none;
 }
 
+/* Displaying the menu list when the checkbox is checked */
 #checkbox:checked~.menu ul {
     display: block;
-
 }
 
+/* Styling the list items in the menu */
 .menu ul li {
     display: block;
     padding: 8px 0;
     min-width: 200px;
 }
 
+/* Styling the links in the menu list */
 .menu ul li a {
     display: block;
     text-decoration: none;
@@ -113,10 +132,12 @@ nav {
     padding: 4px 64px 4px 34px;
 }
 
+/* Adding hover effect for the links */
 .menu ul li a:hover {
     background-color: #e5e5e5;
 }
 
+/* Styling the bars of the menu icon */
 .container span {
     display: block;
     position: relative;
@@ -127,6 +148,7 @@ nav {
     transition: transform 0.3s ease, width 0.3s ease
 }
 
+/* Positioning the content container */
 .content {
     position: absolute;
     transform: translate(50%, 50%);
@@ -136,22 +158,25 @@ nav {
     text-align: right;
 }
 
-
+/* Styling the heading in the content */
 .content h1 {
     font-size: 50px;
     margin-bottom: 24px;
 }
 
+/* Styling the paragraphs in the content */
 .content p {
     font-size: 24px;
     line-height: 2;
 }
 
+/* Styling the span elements inside paragraphs */
 .content p span {
     font-size: 16px;
     line-height: 2;
 }
 
+/* Keyframe animations for the top bar */
 @keyframes top {
     0% {
         width: 100%;
@@ -196,7 +221,7 @@ nav {
     }
 }
 
-
+/* Keyframe animations for the middle bar */
 @keyframes middle {
     0% {
         width: 100%;
@@ -239,6 +264,7 @@ nav {
     }
 }
 
+/* Keyframe animations for the bottom bar */
 @keyframes bottom {
     0% {
         width: 100%;

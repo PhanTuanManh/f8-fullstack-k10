@@ -1,3 +1,4 @@
+/* Resetting padding, margin, and box-sizing for all elements */
 *,
 *::after,
 *::before {
@@ -6,10 +7,12 @@
     box-sizing: inherit;
 }
 
+/* Setting box-sizing to border-box for the HTML element */
 html {
     box-sizing: border-box;
 }
 
+/* Centering content using grid and setting background color for the body */
 body {
     display: grid;
     place-items: center;
@@ -19,10 +22,12 @@ body {
     background-color: #313642;
 }
 
+/* Positioning the container element */
 .container {
     position: relative;
 }
 
+/* Styling the letter element */
 .letter {
     position: relative;
     top: 50px;
@@ -30,10 +35,12 @@ body {
     transition: transform .6s ease;
 }
 
+/* Adding hover effect to the letter element */
 .letter:hover {
     transform: translateY(50px);
 }
 
+/* Styling the cover element */
 .cover {
     position: relative;
     width: 300px;
@@ -41,6 +48,7 @@ body {
     background-color: #C84F3D;
 }
 
+/* Adding a triangular shape to the cover using ::before pseudo-element */
 .cover::before {
     content: "";
     position: absolute;
@@ -58,13 +66,14 @@ body {
     z-index: 9;
 }
 
-
+/* Animating the cover's ::before element on hover */
 .letter:hover .cover::before {
     transform: rotateX(0deg);
     transition-delay: 0s;
     z-index: 7;
 }
 
+/* Styling the card container */
 .card-container {
     position: relative;
     width: 300px;
@@ -73,6 +82,7 @@ body {
     overflow: hidden;
 }
 
+/* Styling the card element */
 .card {
     position: absolute;
     width: 250px;
@@ -85,11 +95,13 @@ body {
     z-index: 10;
 }
 
+/* Animating the card element on hover */
 .letter:hover .card {
     transform: translateY(-230px);
     transition-delay: .3s;
 }
 
+/* Styling the head section of the card */
 .head {
     height: 20px;
     display: flex;
@@ -97,6 +109,7 @@ body {
     overflow: hidden;
 }
 
+/* Styling the parallelogram shape */
 .parallelogram {
     background-color: #C56B6E;
     height: initial;
@@ -104,11 +117,13 @@ body {
     transform: skew(-40deg);
 }
 
+/* Styling the body of the card */
 .body {
     height: 100%;
     padding: 10px;
 }
 
+/* Styling the top rectangle in the card */
 .rectangle_top {
     background-color: #C56B6E;
     width: 100px;
@@ -116,6 +131,7 @@ body {
     margin-top: 6px;
 }
 
+/* Styling the bottom rectangle in the card */
 .rectangle_bottom {
     background-color: #C56B6E;
     width: 50px;
@@ -123,6 +139,7 @@ body {
     margin-top: 16px;
 }
 
+/* Styling the circle in the card */
 .circle {
     width: 50px;
     height: 50px;
@@ -131,6 +148,7 @@ body {
     transform: translate(170px, 60px);
 }
 
+/* Styling the front part of the envelope */
 .front {
     position: absolute;
     border-left: 150px solid #E1514B;
@@ -143,6 +161,7 @@ body {
     z-index: 99;
 }
 
+/* Styling the front part of the envelope using ::before pseudo-element */
 .front::before {
     position: absolute;
     content: "";
@@ -152,6 +171,7 @@ body {
     top: -101px;
 }
 
+/* Styling the shadow element */
 .shadow {
     position: absolute;
     width: 290px;
@@ -165,6 +185,7 @@ body {
     transition: width .3s linear;
 }
 
+/* Animating the shadow element on hover */
 .letter:hover~.shadow {
     width: 200px;
 }

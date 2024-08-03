@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.toggle-wrap {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+    width: 120px;
+    height: 50px;
+    border-radius: 99px;
+    padding: 2px;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.circle {
+    background-color: #fff;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    transition: transform .3s ease;
+}
+
+input[type="checkbox"]:checked+.toggle-wrap {
+    background-color: green;
+}
+
+input[type="checkbox"]:checked+.toggle-wrap>.circle {
+    transform: translateX(70px);
+}

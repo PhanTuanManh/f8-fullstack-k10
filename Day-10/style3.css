@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+h2 {
+    color: green;
+    position: relative;
+}
+
+
+.font {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    transition: top .3s ease;
+}
+
+.font>span {
+    position: absolute;
+    bottom: 0;
+    color: red;
+}
+
+h2:hover .font {
+    top: 0;
+}
