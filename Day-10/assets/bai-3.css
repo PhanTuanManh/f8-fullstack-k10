@@ -80,6 +80,7 @@ body {
     height: 500px;
     top: -310px;
     overflow: hidden;
+    pointer-events: none;
 }
 
 /* Styling the card element */
