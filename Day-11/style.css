@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 250px;
+    background-color: rgb(251, 249, 249);
+    translate: -100%;
+    transition: translate .3s ease;
+    z-index: 1;
+
+}
+
+.overlay {
+    opacity: 0;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity .3s ease, visibility .3s ease;
+    visibility: hidden;
+}
+
+
+input[type="checkbox"]:checked~.menu {
+    translate: 0;
+}
+
+
+input[type=checkbox]:checked+.overlay {
+    opacity: 1;
+    visibility: visible;
+}
