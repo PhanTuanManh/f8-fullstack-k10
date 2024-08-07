@@ -175,6 +175,8 @@ html {
     padding: 12px 18px;
     display: flex;
     align-items: center;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.09);
+    border-radius: 8px;
 }
 
 
@@ -331,6 +333,13 @@ html {
     border: none;
     transition: .2s all ease;
 }
+
+.btn-process-wrapper .btn-process .play-icon {
+    border-radius: 50%;
+    box-shadow: 0px 20px 49px -10px rgba(0, 0, 0, 0.08);
+}
+
+
 
 .content-btn .btn-process-wrapper .btn-process:hover {
     color: var(--color3);
